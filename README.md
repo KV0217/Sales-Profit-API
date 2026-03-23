@@ -40,4 +40,4 @@ uvicorn main:app --reload
 FastAPI · Gradient Boosting · Scikit-learn · Docker · Render
 
 ## Related
-- Analysis notebook: [Retail-Sales-Revenue](https://github.com/KV0217/retail-sales-revenue)
+- Analysis notebook: [Retail-Sales-Revenue](https://github.com/KV0217/retail-sales-analysis)
