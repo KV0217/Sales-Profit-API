@@ -9,10 +9,6 @@ Production REST API predicting profit margin — R² 0.9436 on Superstore datase
 | Docs | https://sales-profit-api.onrender.com/docs |
 | Health | https://sales-profit-api.onrender.com/health |
 
-## Screenshots
-![API Docs](screenshots/api_docs.png)
-![Predict Response](screenshots/predict_response.png)
-![What-If Response](screenshots/whatif_response.png)
 
 ## Endpoints
 | Method | Endpoint | Description |
