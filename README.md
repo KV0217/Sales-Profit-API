@@ -1,14 +1,39 @@
-# Sales Profit API
+# Sales Profit Margin Prediction API
 
-## Overview
-This repository contains the REST API deployment for the [RETAIL-SALES-ANALYSIS](https://github.com/KV0217/RETAIL-SALES-ANALYSIS) machine learning models.
+Production REST API predicting profit margin — R² 0.9436 on Superstore dataset.
 
-## Features
-- **"What-If" Margin Simulator:** A real-time API endpoint that quantifies margin impact. For example, it calculates that a 20% discount reduces margin to 8.4% (vs 24.8% at zero discount).
-- **Dockerized:** Containerized via Docker for seamless deployment.
-- **REST API:** Built with FastAPI.
+## Live
+| | URL |
+|--|--|
+| API | https://sales-profit-api.onrender.com |
+| Docs | https://sales-profit-api.onrender.com/docs |
+| Health | https://sales-profit-api.onrender.com/health |
+
+
+## Endpoints
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | /health | Health check |
+| POST | /predict | Predict profit margin for an order |
+| POST | /predict/batch | Batch order predictions |
+| POST | /whatif | Compare margin at different discount levels |
+
+## The /whatif Endpoint
+Unique to this API — quantifies the exact cost of every discount decision:
+- Send an order with current discount
+- Get back margin at current, -10%, and 0% discount
+- Instantly shows how much margin is being sacrificed
+
+## Run Locally
+```bash
+git clone https://github.com/KV0217/Sales-Profit-API.git
+cd Sales-Profit-API
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
 
 ## Tech Stack
-- **Framework:** FastAPI
-- **Containerization:** Docker
-- **Language:** Python
+FastAPI · Gradient Boosting · Scikit-learn · Docker · Render
+
+## Related
+- Analysis notebook: [Retail-Sales-Revenue](https://github.com/KV0217/retail-sales-analysis)
